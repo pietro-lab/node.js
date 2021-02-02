@@ -1,8 +1,9 @@
 module.exports = app => {
+    //const controller = app.controllers.CustomerWallets;
     const controller = require('../controllers/customerWallets')();
 
-
-    app.route('/api/v1/customer-wallets').get(controller.listCustomerWallets);
+    const newLocal = '/api/v1/customer-wallets';
+    app.route(newLocal).get(controller.listCustomerWallets);
 
 
 
